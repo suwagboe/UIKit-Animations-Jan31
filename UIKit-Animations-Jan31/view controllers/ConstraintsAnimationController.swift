@@ -27,6 +27,14 @@ class ConstraintsAnimationController: UIViewController {
         
         viewYConstraint.constant -= 100
         // plus 100 .. removing 100 from the constraint
+        
+        // when we change the constraints in iOS and we need this chanfe to be animated we only need to animate self.view.layoutIfNeeded and the animatino will take place
+        
+        //layoutifNeeded will get called as the view is marked "dirst" by iOS, we inplementing self.view.layoutIsNeeded in the animation block will cause the animation
+        
+        UIView.animate(withDuration: 0.3, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 5.0,options: [.curveEaseOut] , animations: {
+            self.view.layoutIfNeeded()
+        }, completion: nil)
     }
     
     
@@ -37,6 +45,9 @@ class ConstraintsAnimationController: UIViewController {
         viewYConstraint.constant += 100
         // plus 100 .. adding 100
         
+        UIView.animate(withDuration: 0.1, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 5.0,options: [.curveEaseInOut] , animations: {
+                   self.view.layoutIfNeeded()
+               }, completion: nil)
     }
     
     
