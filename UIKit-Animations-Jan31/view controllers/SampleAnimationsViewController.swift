@@ -31,11 +31,12 @@ Properties that can be animated
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        scaleAnimation()
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        scaleAnimation()
         //pulsatingAnimation()
     }
     

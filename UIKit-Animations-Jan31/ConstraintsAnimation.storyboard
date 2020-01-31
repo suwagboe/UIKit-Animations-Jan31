@@ -33,12 +33,22 @@
                                     <constraint firstAttribute="height" constant="44" id="M4N-GW-WWs"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QOh-lc-S0d">
+                                <rect key="frame" x="103.5" y="344.5" width="207" height="207"/>
+                                <color key="backgroundColor" red="0.76470588240000004" green="0.74509803919999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QOh-lc-S0d" secondAttribute="height" id="Pgt-xT-t8X"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="n5h-1O-heK" firstAttribute="bottom" secondItem="Q8u-ad-84O" secondAttribute="bottom" constant="-100" id="B9R-wo-5aL"/>
                             <constraint firstItem="Q8u-ad-84O" firstAttribute="trailing" secondItem="n5h-1O-heK" secondAttribute="trailing" constant="20" id="QS1-Rm-TK5"/>
                             <constraint firstItem="n5h-1O-heK" firstAttribute="leading" secondItem="Q8u-ad-84O" secondAttribute="leading" constant="20" id="XZH-4r-riy"/>
+                            <constraint firstItem="QOh-lc-S0d" firstAttribute="centerX" secondItem="oE1-8g-cQd" secondAttribute="centerX" id="iix-od-Lg8"/>
+                            <constraint firstItem="QOh-lc-S0d" firstAttribute="width" secondItem="oE1-8g-cQd" secondAttribute="width" multiplier="0.5" id="mWw-2v-Tin"/>
+                            <constraint firstItem="QOh-lc-S0d" firstAttribute="centerY" secondItem="oE1-8g-cQd" secondAttribute="centerY" id="qSY-dB-Dre"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Q8u-ad-84O"/>
                     </view>
