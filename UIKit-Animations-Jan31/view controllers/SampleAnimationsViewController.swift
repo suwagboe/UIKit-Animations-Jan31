@@ -9,12 +9,23 @@
 import UIKit
 
 class SampleAnimationsViewController: UIViewController {
+    
+    private let sampleAnimationsView = sampleAnimationView()
+    
+    override func loadView() {
+        view = sampleAnimationsView
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .magenta
+        view.backgroundColor = .systemBackground
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+    }
+    
+    
     
 
     

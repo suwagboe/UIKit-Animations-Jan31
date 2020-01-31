@@ -13,19 +13,25 @@ class sampleAnimationView: UIView {
     public lazy var pursuitLogo: UIImageView = {
         let imageView = UIImageView()
         imageView.image = #imageLiteral(resourceName: "pursuit-logo")
+        // this is a default that we would usually
+        imageView.contentMode = .scaleAspectFit
         return imageView
+
     }()
     
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
+        commonInit()
     }
     
+    // only called coming from a storyboard
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        commonInit()
     }
     
     private func commonInit() {
-        
+        pursuitLogoConstraints()
         
     }
     
