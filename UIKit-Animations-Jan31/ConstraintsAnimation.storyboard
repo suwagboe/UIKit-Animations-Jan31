@@ -22,11 +22,17 @@
                                         <rect key="frame" x="0.0" y="0.0" width="167" height="44"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="up"/>
+                                        <connections>
+                                            <action selector="animateUpButton:" destination="Yof-os-M4m" eventType="touchUpInside" id="Efv-3p-7Ua"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDv-au-XKe">
                                         <rect key="frame" x="207" y="0.0" width="167" height="44"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="down"/>
+                                        <connections>
+                                            <action selector="animateDownButton:" destination="Yof-os-M4m" eventType="touchUpInside" id="bBy-xq-pds"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -52,6 +58,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Q8u-ad-84O"/>
                     </view>
+                    <connections>
+                        <outlet property="viewYConstraint" destination="qSY-dB-Dre" id="JGS-PR-fUv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1HT-xK-Z1T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
