@@ -59,6 +59,7 @@
                         <viewLayoutGuide key="safeArea" id="Q8u-ad-84O"/>
                     </view>
                     <connections>
+                        <outlet property="box" destination="QOh-lc-S0d" id="1z6-Ie-xUf"/>
                         <outlet property="viewYConstraint" destination="qSY-dB-Dre" id="JGS-PR-fUv"/>
                     </connections>
                 </viewController>
