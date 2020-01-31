@@ -22,7 +22,7 @@ Properties that can be animated
      transfor: scale, rotate, translate
      */
     
-    private let sampleAnimationsViewInstance = sampleAnimationView()
+    private let sampleAnimationsViewInstance = SampleAnimationView()
     
     override func loadView() {
         view = sampleAnimationsViewInstance
@@ -35,8 +35,8 @@ Properties that can be animated
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        //scaleAnimation()
-        pulsatingAnimation()
+        scaleAnimation()
+        //pulsatingAnimation()
     }
     
     private func pulsatingAnimation(){
@@ -55,13 +55,32 @@ Properties that can be animated
     }
     
     private func scaleAnimation(){
+        
+        UIView.animate(withDuration: 0.3, delay: 0.0, options: [], animations: {
+            // this is a 3rd of a second
+                       // any transform value of 1.0 represents the identity of the view..
+                       self.sampleAnimationsViewInstance.pursuitLogo.transform = CGAffineTransform(scaleX: 20.0, y: 20.0)
+                       self.sampleAnimationsViewInstance.pursuitLogo.alpha = 0.0
+                       //self.sampleAnimationsViewInstance.pursuitLogo.transform3D = CATransform3D(0.9)
+        /*
         UIView.animate(withDuration: 1.5) { // this is a 3rd of a second
             // any transform value of 1.0 represents the identity of the view..
             self.sampleAnimationsViewInstance.pursuitLogo.transform = CGAffineTransform(scaleX: 20.0, y: 20.0)
             self.sampleAnimationsViewInstance.pursuitLogo.alpha = 0.0
             //self.sampleAnimationsViewInstance.pursuitLogo.transform3D = CATransform3D(0.9)
+ */
+            }) { (done) in
+                // gets called animation is done
+                
+                UIView.animate(withDuration: 0.5)
+                {
+                    self.sampleAnimationsViewInstance.SwiftLogo.isHidden = false
+                    self.sampleAnimationsViewInstance.SwiftLogo.layer.cornerRadius = self.sampleAnimationsViewInstance.SwiftLogo.bounds.size.width / 2.0
+                }
+                
+            }
         }
-    }
+        
     
 
     
