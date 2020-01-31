@@ -27,7 +27,7 @@
 		5515533E23E47FA200E2DF47 /* AnimationsTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsTabController.swift; sourceTree = "<group>"; };
 		5515534223E4807600E2DF47 /* SampleAnimationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAnimationsViewController.swift; sourceTree = "<group>"; };
 		5515534523E4809E00E2DF47 /* ConstraintsAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintsAnimationController.swift; sourceTree = "<group>"; };
-		55B7A02823E486CB002382FF /* sampleAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = sampleAnimationView.swift; path = "view controllers/sampleAnimationView.swift"; sourceTree = "<group>"; };
+		55B7A02823E486CB002382FF /* sampleAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleAnimationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +60,12 @@
 		5515532923E47E3500E2DF47 /* UIKit-Animations-Jan31 */ = {
 			isa = PBXGroup;
 			children = (
+				55B7A02A23E48BEA002382FF /* views */,
 				5515534423E4807C00E2DF47 /* view controllers */,
 				5515532A23E47E3500E2DF47 /* AppDelegate.swift */,
 				5515532C23E47E3500E2DF47 /* SceneDelegate.swift */,
 				5515533323E47E3800E2DF47 /* Assets.xcassets */,
 				5515533523E47E3800E2DF47 /* LaunchScreen.storyboard */,
-				55B7A02823E486CB002382FF /* sampleAnimationView.swift */,
 				5515533823E47E3800E2DF47 /* Info.plist */,
 			);
 			path = "UIKit-Animations-Jan31";
@@ -74,11 +74,19 @@
 		5515534423E4807C00E2DF47 /* view controllers */ = {
 			isa = PBXGroup;
 			children = (
+				55B7A02823E486CB002382FF /* sampleAnimationView.swift */,
 				5515533E23E47FA200E2DF47 /* AnimationsTabController.swift */,
 				5515534223E4807600E2DF47 /* SampleAnimationsViewController.swift */,
 				5515534523E4809E00E2DF47 /* ConstraintsAnimationController.swift */,
 			);
 			path = "view controllers";
+			sourceTree = "<group>";
+		};
+		55B7A02A23E48BEA002382FF /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
