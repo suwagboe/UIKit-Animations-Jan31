@@ -14,6 +14,7 @@
 		5515533F23E47FA200E2DF47 /* AnimationsTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5515533E23E47FA200E2DF47 /* AnimationsTabController.swift */; };
 		5515534323E4807600E2DF47 /* SampleAnimationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5515534223E4807600E2DF47 /* SampleAnimationsViewController.swift */; };
 		5515534623E4809E00E2DF47 /* ConstraintsAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5515534523E4809E00E2DF47 /* ConstraintsAnimationController.swift */; };
+		55B7A02923E486CB002382FF /* sampleAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B7A02823E486CB002382FF /* sampleAnimationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5515533E23E47FA200E2DF47 /* AnimationsTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsTabController.swift; sourceTree = "<group>"; };
 		5515534223E4807600E2DF47 /* SampleAnimationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAnimationsViewController.swift; sourceTree = "<group>"; };
 		5515534523E4809E00E2DF47 /* ConstraintsAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintsAnimationController.swift; sourceTree = "<group>"; };
+		55B7A02823E486CB002382FF /* sampleAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = sampleAnimationView.swift; path = "view controllers/sampleAnimationView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				5515532C23E47E3500E2DF47 /* SceneDelegate.swift */,
 				5515533323E47E3800E2DF47 /* Assets.xcassets */,
 				5515533523E47E3800E2DF47 /* LaunchScreen.storyboard */,
+				55B7A02823E486CB002382FF /* sampleAnimationView.swift */,
 				5515533823E47E3800E2DF47 /* Info.plist */,
 			);
 			path = "UIKit-Animations-Jan31";
@@ -151,6 +154,7 @@
 				5515532B23E47E3500E2DF47 /* AppDelegate.swift in Sources */,
 				5515533F23E47FA200E2DF47 /* AnimationsTabController.swift in Sources */,
 				5515532D23E47E3500E2DF47 /* SceneDelegate.swift in Sources */,
+				55B7A02923E486CB002382FF /* sampleAnimationView.swift in Sources */,
 				5515534323E4807600E2DF47 /* SampleAnimationsViewController.swift in Sources */,
 				5515534623E4809E00E2DF47 /* ConstraintsAnimationController.swift in Sources */,
 			);

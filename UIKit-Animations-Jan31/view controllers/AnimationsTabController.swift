@@ -10,6 +10,19 @@ import UIKit
 
 class AnimationsTabController: UITabBarController {
     
+    private lazy var sampleAnimationVC: SampleAnimationsViewController = {
+        let viewcontroller = SampleAnimationsViewController()
+        viewcontroller.tabBarItem = UITabBarItem(title: "Sample Animations", image: UIImage(systemName: "1.circle"), tag: 0)
+        
+        return viewcontroller
+    }()
+    
+    private lazy var constraintsAnimationVC: ConstraintsAnimationController = {
+        let viewcontroller = ConstraintsAnimationController()
+        viewcontroller.tabBarItem = UITabBarItem(title: "Constraints Animation", image: UIImage(systemName: "2.circle"), tag: 1)
+        return viewcontroller
+    }()
+    
     
 
     override func viewDidLoad() {
@@ -18,8 +31,9 @@ class AnimationsTabController: UITabBarController {
         
         // subclass it in order to gain access to the other view controller programmatically.
         // they need to instances()of the controller otherwise it wont work
-        viewControllers = [SampleAnimationsViewController(), ConstraintsAnimationController()]
+        viewControllers = [sampleAnimationVC, constraintsAnimationVC]
         
+    //viewControllers = [SampleAnimationsViewController(), ConstraintsAnimationController()]
         
     }
     
