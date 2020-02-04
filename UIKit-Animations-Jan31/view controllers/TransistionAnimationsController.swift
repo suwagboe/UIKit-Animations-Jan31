@@ -24,7 +24,7 @@ class TransistionAnimationsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // set default image
         imageView.image = UIImage(named: "dog")
         view.backgroundColor = .systemPink
@@ -35,13 +35,42 @@ class TransistionAnimationsController: UIViewController {
         // add gesture to the image view this part enable the interation between the gesture and the image
         imageView.addGestureRecognizer(tapGesture) // this is the gesture it should recognizer.
     }
-
+    
     @objc
     private func animate() {
         // set up gesture that when the image is tap the image gets called.
         print("animate") // to confirm that this does get called when it is tapped
         
+        let duration: Double = 1.5
+        let curveOption: UIView.AnimationOptions = .curveEaseInOut
         
+        // built in bezier animation curve
+        /*
+         curveEaseInOut
+         CurveEaseIn
+         curveEaseOut
+         curveLinear
+         */
+        
+        if imageView.image == UIImage(named: "dog"){
+            // this is swaping
+            
+            // when changning subview instead of doing it abruptly you can add the transition
+            UIView.transition(with: imageView, duration: duration, options: [.transitionFlipFromRight, curveOption], animations: {
+                //aniimation block goes here
+                // need to call self because we are in a closure
+                self.imageView.image = UIImage(named: "cat")
+                self.imageView.backgroundColor = .systemTeal
+                // if the image is a dog change it to a cat
+            }, completion: nil)
+        } else {
+            // else change it to a dog
+            UIView.transition(with: imageView, duration: duration, options: [.transitionFlipFromLeft, curveOption], animations: {
+                           self.imageView.image = UIImage(named: "dog")
+                self.imageView.backgroundColor = .purple
+                           // if the image is a cat change it to a dog
+                       }, completion: nil)
+        }
         
     }
     
