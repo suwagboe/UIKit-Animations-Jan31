@@ -87,10 +87,10 @@
 			children = (
 				5515533E23E47FA200E2DF47 /* AnimationsTabController.swift */,
 				55B7A02823E486CB002382FF /* SampleAnimationView.swift */,
-				55731F5C23E9D74D00674F2B /* PropertyAnimatorController.swift */,
 				5515534223E4807600E2DF47 /* SampleAnimationsViewController.swift */,
 				55731F5823E9CB2D00674F2B /* TransistionAnimationsController.swift */,
 				5515534523E4809E00E2DF47 /* ConstraintsAnimationController.swift */,
+				55731F5C23E9D74D00674F2B /* PropertyAnimatorController.swift */,
 			);
 			path = "view controllers";
 			sourceTree = "<group>";

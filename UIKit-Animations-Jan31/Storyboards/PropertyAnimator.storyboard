@@ -14,13 +14,42 @@
                     <view key="view" contentMode="scaleToFill" id="am7-eN-D7j">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="duck" translatesAutoresizingMaskIntoConstraints="NO" id="bAR-zg-8fi">
+                                <rect key="frame" x="103.5" y="344.5" width="207" height="207"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bAR-zg-8fi" secondAttribute="height" multiplier="1:1" id="fB9-EX-HqS"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lw9-0I-ub1">
+                                <rect key="frame" x="38" y="652" width="338" height="31"/>
+                                <connections>
+                                    <action selector="sliderDidChange:" destination="ke7-g3-0x4" eventType="valueChanged" id="gUt-T8-Jby"/>
+                                </connections>
+                            </slider>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="e8n-I3-hG2" firstAttribute="trailing" secondItem="lw9-0I-ub1" secondAttribute="trailing" constant="40" id="9gC-VQ-ZNo"/>
+                            <constraint firstItem="bAR-zg-8fi" firstAttribute="centerX" secondItem="am7-eN-D7j" secondAttribute="centerX" id="AVK-Qp-nWb"/>
+                            <constraint firstItem="bAR-zg-8fi" firstAttribute="width" secondItem="am7-eN-D7j" secondAttribute="width" multiplier="0.5" id="LEo-mo-ihd"/>
+                            <constraint firstItem="bAR-zg-8fi" firstAttribute="centerY" secondItem="am7-eN-D7j" secondAttribute="centerY" id="TDv-fq-D2i"/>
+                            <constraint firstItem="lw9-0I-ub1" firstAttribute="leading" secondItem="e8n-I3-hG2" secondAttribute="leading" constant="40" id="YIr-MO-oMi"/>
+                            <constraint firstItem="e8n-I3-hG2" firstAttribute="bottom" secondItem="lw9-0I-ub1" secondAttribute="bottom" constant="180" id="kG0-dv-edf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="e8n-I3-hG2"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="bAR-zg-8fi" id="KkU-NC-JEd"/>
+                        <outlet property="slider" destination="lw9-0I-ub1" id="Z7z-0t-SbS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdt-ta-Bt3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="126" y="99"/>
+            <point key="canvasLocation" x="124.6376811594203" y="98.4375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="duck" width="800" height="800"/>
+    </resources>
 </document>

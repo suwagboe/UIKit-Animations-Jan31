@@ -10,21 +10,29 @@ import UIKit
 
 class PropertyAnimatorController: UIViewController {
 
+    
+    @IBOutlet weak var imageView: UIImageView!
+    
+    
+    @IBOutlet weak var slider: UISlider!
+    // need an instance to a UIViewPropertyAnimator
+    private var animator: UIViewPropertyAnimator!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // instantiate the animator property
+        animator = UIViewPropertyAnimator(duration: 2.0, curve: .easeInOut, animations: {
+            //here is where we declare the animation...
+            
+        })
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func sliderDidChange(_ sender: UIButton) {
+        
     }
-    */
+    
 
 }
