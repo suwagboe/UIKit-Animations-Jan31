@@ -12,7 +12,7 @@ class AnimationsTabController: UITabBarController {
     
     private lazy var sampleAnimationVC: SampleAnimationsViewController = {
         let viewcontroller = SampleAnimationsViewController()
-        viewcontroller.tabBarItem = UITabBarItem(title: "Sample Animations", image: UIImage(systemName: "1.circle"), tag: 0)
+        viewcontroller.tabBarItem = UITabBarItem(title: "Sample", image: UIImage(systemName: "1.circle"), tag: 0)
         
         return viewcontroller
     }()
@@ -33,7 +33,7 @@ class AnimationsTabController: UITabBarController {
             fatalError("couldnt access the ConstraintsAnimationController")
         }
         
-        viewController.tabBarItem = UITabBarItem(title: "Constraints Animation", image: UIImage(systemName: "2.circle"), tag: 1)
+        viewController.tabBarItem = UITabBarItem(title: "Constraints", image: UIImage(systemName: "2.circle"), tag: 1)
         
         return viewController
     }()
@@ -48,15 +48,25 @@ class AnimationsTabController: UITabBarController {
            
            return viewController
        }()
-    
 
+    private lazy var propertyAnimatorVC: PropertyAnimatorController = {
+        let constraintsAnimationStoryboard = UIStoryboard(name: "PropertyAnimator", bundle: nil)
+               guard let viewController = constraintsAnimationStoryboard.instantiateViewController(withIdentifier: "PropertyAnimatorController") as? PropertyAnimatorController else {
+                   fatalError("couldnt access the PropertyAnimatorController")
+               }
+           viewController.tabBarItem = UITabBarItem(title: "Animator", image: UIImage(systemName: "4.circle"), tag: 3)
+           
+           return viewController
+       }()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // set view controllers for the tab bar.. in the app there will be two colors
         
         // subclass it in order to gain access to the other view controller programmatically.
         // they need to instances()of the controller otherwise it wont work
-        viewControllers = [sampleAnimationVC, constraintsAnimationVC, transistionAnimationVC]
+        viewControllers = [sampleAnimationVC, constraintsAnimationVC, transistionAnimationVC, propertyAnimatorVC]
         
     //viewControllers = [SampleAnimationsViewController(), ConstraintsAnimationController()]
         
