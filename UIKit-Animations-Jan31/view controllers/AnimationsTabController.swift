@@ -39,6 +39,16 @@ class AnimationsTabController: UITabBarController {
     }()
     
     
+    private lazy var transistionAnimationVC: TransistionAnimationsController = {
+        let constraintsAnimationStoryboard = UIStoryboard(name: "TransistionAnimations", bundle: nil)
+               guard let viewController = constraintsAnimationStoryboard.instantiateViewController(withIdentifier: "TransistionAnimationsController") as? TransistionAnimationsController else {
+                   fatalError("couldnt access the TransistionAnimationsController")
+               }
+           viewController.tabBarItem = UITabBarItem(title: "Transitions", image: UIImage(systemName: "3.circle"), tag: 2)
+           
+           return viewController
+       }()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +56,7 @@ class AnimationsTabController: UITabBarController {
         
         // subclass it in order to gain access to the other view controller programmatically.
         // they need to instances()of the controller otherwise it wont work
-        viewControllers = [sampleAnimationVC, constraintsAnimationVC]
+        viewControllers = [sampleAnimationVC, constraintsAnimationVC, transistionAnimationVC]
         
     //viewControllers = [SampleAnimationsViewController(), ConstraintsAnimationController()]
         
