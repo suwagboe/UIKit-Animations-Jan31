@@ -70,6 +70,13 @@ Properties that can be animated
             self.sampleAnimationsViewInstance.pursuitLogo.alpha = 0.0
             //self.sampleAnimationsViewInstance.pursuitLogo.transform3D = CATransform3D(0.9)
  */
+            
+            /*
+            Type of Transform(animation):
+              - Scale: manipulates size of object
+              - rotate: turns/ rotates an object clock wise or counter clock wise. Using radians
+              - translation: take the object and moves it from point A to point B.
+             */
             }) { (done) in
                 // gets called animation is done
                 

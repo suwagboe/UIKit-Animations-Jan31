@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Transistion Animations Controller-->
+        <scene sceneID="Sd4-5C-4bl">
+            <objects>
+                <viewController storyboardIdentifier="TransistionAnimationsController" id="FnC-qf-Cdp" customClass="TransistionAnimationsController" customModule="UIKit_Animations_Jan31" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QWG-B5-S21">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="QwC-Ma-2lk">
+                                <rect key="frame" x="103.5" y="344.5" width="207" height="207"/>
+                                <color key="backgroundColor" red="0.76470588240000004" green="0.74509803919999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QwC-Ma-2lk" secondAttribute="height" multiplier="1:1" id="Phl-6v-Bp2"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="QwC-Ma-2lk" firstAttribute="centerY" secondItem="QWG-B5-S21" secondAttribute="centerY" id="EBH-1r-dKt"/>
+                            <constraint firstItem="QwC-Ma-2lk" firstAttribute="centerX" secondItem="QWG-B5-S21" secondAttribute="centerX" id="T3x-Gm-FLF"/>
+                            <constraint firstItem="QwC-Ma-2lk" firstAttribute="width" secondItem="QWG-B5-S21" secondAttribute="width" multiplier="0.5" id="l06-mj-Pxa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wGz-Jh-f27"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="QwC-Ma-2lk" id="faX-Ci-lv9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uTC-HF-fNn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="78" y="82"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dog" width="512" height="341"/>
+    </resources>
+</document>
