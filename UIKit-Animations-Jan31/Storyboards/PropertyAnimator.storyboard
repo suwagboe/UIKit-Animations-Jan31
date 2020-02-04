@@ -21,7 +21,7 @@
                                     <constraint firstAttribute="width" secondItem="bAR-zg-8fi" secondAttribute="height" multiplier="1:1" id="fB9-EX-HqS"/>
                                 </constraints>
                             </imageView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lw9-0I-ub1">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lw9-0I-ub1">
                                 <rect key="frame" x="38" y="652" width="338" height="31"/>
                                 <connections>
                                     <action selector="sliderDidChange:" destination="ke7-g3-0x4" eventType="valueChanged" id="gUt-T8-Jby"/>

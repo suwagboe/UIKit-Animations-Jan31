@@ -30,7 +30,9 @@ class PropertyAnimatorController: UIViewController {
         
     }
     
-    @IBAction func sliderDidChange(_ sender: UIButton) {
+    @IBAction func sliderDidChange(_ sender: UISlider) {
+        
+        animator.fractionComplete = CGFloat(sender.value)
         
     }
     
